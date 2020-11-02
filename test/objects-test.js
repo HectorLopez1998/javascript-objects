@@ -36,6 +36,10 @@ describe('objects', () => {
   })
 
   describe('removeFromPlaylist(playlist, artistName)', () => {
+    before(() => {
+      playlist['Slowdive'] = 'Alison'
+      playlist['My Bloody Valentine'] = 'Sometimes'
+    })
     it('removes `artistName` from `playlist`', () => {
       removeFromPlaylist(playlist, 'Slowdive')
 
